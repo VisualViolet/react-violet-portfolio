@@ -11,20 +11,6 @@ export default function Contact() {
   const [message, setMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
-  // const handleInputChange = (e) => {
-  //   const { target } = e;
-  //   const inputType = target.name;
-  //   const inputValue = target.value;
-
-  //   if (inputType === 'name') {
-  //     setUsername(inputValue);
-  //   } else if (inputType === 'email') {
-  //     setEmail(inputValue);
-  //   } else {
-  //     setMessage(inputValue);
-  //   }
-  // };
-
   const handleFormSubmit = (e) => {
     e.preventDefault();
 
@@ -76,9 +62,6 @@ export default function Contact() {
         Submit
       </Button>
       {errorMessage && (
-        // <div>
-        //    <p className="error-text">{errorMessage}</p>
-        //  </div>
         <div>
         <Alert variant="warning" className="mt-5 m-auto text-center" style={{ width: "20rem" }}>
           {errorMessage}
@@ -87,36 +70,5 @@ export default function Contact() {
        )}
     </Form>
     </div>
-    // <div>
-    //   <form className='form'>
-    //   <input
-    //       value={username}
-    //       name="name"
-    //       onChange={handleInputChange}
-    //       type="text"
-    //       placeholder="Name"
-    //     />
-    //     <input
-    //       value={email}
-    //       name="email"
-    //       onChange={handleInputChange}
-    //       type="email"
-    //       placeholder="Email"
-    //     />
-    //     <input
-    //       value={message}
-    //       name="message"
-    //       onChange={handleInputChange}
-    //       type="text"
-    //       placeholder="Message"
-    //     />
-    //     <button type="button" onClick={handleFormSubmit}>Submit</button>
-    //   </form>
-    //   {errorMessage && (
-    //     <div>
-    //       <p className="error-text">{errorMessage}</p>
-    //     </div>
-    //   )}
-    // </div>
   );
 }
