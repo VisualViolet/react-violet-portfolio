@@ -2,9 +2,9 @@ import React from 'react';
 
 export default function Resume() {
   return (
-    <div>
-      <p>Download my resume</p>
-      <h2>Front End Skills</h2>
+    <div className='skills'>
+      <p>Download my <a href="Savannah Miller Dev Resume.pdf" download>resume</a></p>
+      <h2 className='title'>Front End Skills</h2>
       <ul>
         <li>HTML</li>
         <li>CSS</li>
@@ -14,7 +14,7 @@ export default function Resume() {
         <li>Bootstrap</li>
       </ul>
 
-      <h2>Back End Skills</h2>
+      <h2 className='title'>Back End Skills</h2>
       <ul>
         <li>API's</li>
         <li>Node</li>

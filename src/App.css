@@ -1,14 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
 * {
     margin: 2px;
     padding: 0;
+    font-family: 'Raleway', sans-serif;
   }
 
-/* .cards {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    gap: 30px;
-} */
+.title {
+    font-weight: 700;
+}
+
+.picture {
+    display: block;
+    width: 200px;
+    border-radius: 10px;
+    margin: auto;
+}
+
 .card-area {
     width: 100%;
 }
@@ -19,4 +27,15 @@
 
 .card {
     width: 400px;
+}
+
+.card:hover {
+    opacity: 0.7;
+    transition: 2s ease-out;
+    transform: translateY(-5%);
+}
+
+
+.skills ul li{
+    list-style-type: none;
 }

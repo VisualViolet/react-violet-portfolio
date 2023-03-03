@@ -8,6 +8,7 @@ const Navigation = () => {
         <Navbar bg="light" variant="light">
         <Container>
           <Nav className="m-auto">
+          <Navbar.Brand>Savannah Miller</Navbar.Brand>
             <Nav.Link href="/">About</Nav.Link>
             <Nav.Link href="/portfolio">Portfolio</Nav.Link>
             <Nav.Link href="/contact">Contact</Nav.Link>
