@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import Alert from "react-bootstrap/Alert";
 import { validateEmail } from '../../utils/helpers';
 
 export default function Contact() {
@@ -8,19 +11,19 @@ export default function Contact() {
   const [message, setMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
-  const handleInputChange = (e) => {
-    const { target } = e;
-    const inputType = target.name;
-    const inputValue = target.value;
+  // const handleInputChange = (e) => {
+  //   const { target } = e;
+  //   const inputType = target.name;
+  //   const inputValue = target.value;
 
-    if (inputType === 'name') {
-      setUsername(inputValue);
-    } else if (inputType === 'email') {
-      setEmail(inputValue);
-    } else {
-      setMessage(inputValue);
-    }
-  };
+  //   if (inputType === 'name') {
+  //     setUsername(inputValue);
+  //   } else if (inputType === 'email') {
+  //     setEmail(inputValue);
+  //   } else {
+  //     setMessage(inputValue);
+  //   }
+  // };
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
@@ -49,36 +52,67 @@ export default function Contact() {
   };
 
   return (
-    <div>
-      <form className='form'>
-      <input
-          value={username}
-          name="name"
-          onChange={handleInputChange}
-          type="text"
-          placeholder="Name"
-        />
-        <input
-          value={email}
-          name="email"
-          onChange={handleInputChange}
-          type="email"
-          placeholder="Email"
-        />
-        <input
-          value={message}
-          name="message"
-          onChange={handleInputChange}
-          type="text"
-          placeholder="Message"
-        />
-        <button type="button" onClick={handleFormSubmit}>Submit</button>
-      </form>
+    <Form className='w-50 m-auto'>
+      <Form.Group className="mb-3" controlId="formBasicName">
+        <Form.Label>Name</Form.Label>
+        <Form.Control type="text" placeholder="Name" value={username} onChange={(e) => {setUsername(e.target.value);}} />
+      </Form.Group>
+
+      <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Label>Email</Form.Label>
+        <Form.Control type="email" placeholder="Email" value={email} onChange={(e) => {setEmail(e.target.value);}}/>
+        <Form.Text className="text-muted">
+          We'll never share your email with anyone else.
+        </Form.Text>
+      </Form.Group>
+       <Form.Group className="mb-3" controlId="ControlText">
+        <Form.Label>Message</Form.Label>
+        <Form.Control as="textarea" rows={3} type="text" value={message} onChange={(e) => {setMessage(e.target.value);}}/>
+      </Form.Group>
+      <Button variant="primary" type="submit" onClick={handleFormSubmit}>
+        Submit
+      </Button>
       {errorMessage && (
+        // <div>
+        //    <p className="error-text">{errorMessage}</p>
+        //  </div>
         <div>
-          <p className="error-text">{errorMessage}</p>
+        <Alert variant="warning" className="mt-5 m-auto text-center" style={{ width: "20rem" }}>
+          {errorMessage}
+        </Alert>
         </div>
-      )}
-    </div>
+       )}
+    </Form>
+    // <div>
+    //   <form className='form'>
+    //   <input
+    //       value={username}
+    //       name="name"
+    //       onChange={handleInputChange}
+    //       type="text"
+    //       placeholder="Name"
+    //     />
+    //     <input
+    //       value={email}
+    //       name="email"
+    //       onChange={handleInputChange}
+    //       type="email"
+    //       placeholder="Email"
+    //     />
+    //     <input
+    //       value={message}
+    //       name="message"
+    //       onChange={handleInputChange}
+    //       type="text"
+    //       placeholder="Message"
+    //     />
+    //     <button type="button" onClick={handleFormSubmit}>Submit</button>
+    //   </form>
+    //   {errorMessage && (
+    //     <div>
+    //       <p className="error-text">{errorMessage}</p>
+    //     </div>
+    //   )}
+    // </div>
   );
 }
