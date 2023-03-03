@@ -2,3 +2,21 @@
     margin: 2px;
     padding: 0;
   }
+
+/* .cards {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 30px;
+} */
+.card-area {
+    width: 100%;
+}
+
+.card-container {
+    gap: 20px;
+}
+
+.card {
+    width: 400px;
+}

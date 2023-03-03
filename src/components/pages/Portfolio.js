@@ -24,7 +24,7 @@ const profileGen = {
 
 const techBlog = {
   name: 'Tech Blogger',
-  description: 'A CMS style blog site (think Wordpress) where developers can publish blog posts and comment on others as well!',
+  description: 'A CMS style blog site where developers can publish blog posts and comment on others as well!',
   deployed: 'https://mvc-tech-blogger-sql.herokuapp.com/',
   repo: 'https://github.com/VisualViolet/mvc-tech-blog'
 }
@@ -46,15 +46,19 @@ const splash = {
 export default function Portfolio() {
   return (
     <div>
-      <h1>Portfolio</h1>
-      <div>
-      <Project name={dwuGame.name} description={dwuGame.description} deployed={dwuGame.deployed} repository={dwuGame.repo}/>
-      <Project name={apothecary.name} description={apothecary.description} deployed={apothecary.deployed} repository={apothecary.repo}/>
-      <Project name={profileGen.name} description={profileGen.description} deployed={profileGen.deployed} repository={profileGen.repo}/>
-      <Project name={techBlog.name} description={techBlog.description} deployed={techBlog.deployed} repository={techBlog.repo}/>
-      <Project name={scheduler.name} description={scheduler.description} deployed={scheduler.deployed} repository={scheduler.repo}/>
-      <Project name={splash.name} description={splash.description} deployed={splash.deployed} repository={splash.repo}/>
-      </div>
+      <h1 className='text-center'>Portfolio</h1>
+        <div className='row card-area mt-5'>
+          <div className='card-container col-12 d-flex flex-wrap justify-content-center'>
+            <Project name={dwuGame.name} description={dwuGame.description} deployed={dwuGame.deployed} repository={dwuGame.repo}/>
+            <Project name={apothecary.name} description={apothecary.description} deployed={apothecary.deployed} repository={apothecary.repo}/>
+            <Project name={profileGen.name} description={profileGen.description} deployed={profileGen.deployed} repository={profileGen.repo}/>
+          </div>
+            <div className='card-container col-12 d-flex flex-wrap justify-content-center mt-5'>
+              <Project name={techBlog.name} description={techBlog.description} deployed={techBlog.deployed} repository={techBlog.repo}/>
+              <Project name={scheduler.name} description={scheduler.description} deployed={scheduler.deployed} repository={scheduler.repo}/>
+              <Project name={splash.name} description={splash.description} deployed={splash.deployed} repository={splash.repo}/>
+            </div>
+        </div>
     </div>
   );
 }
