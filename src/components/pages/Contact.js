@@ -53,24 +53,24 @@ export default function Contact() {
 
   return (
     <div>
-    <h1 className='text-center title'>Contact me!</h1>
+    <h1 className='text-center title mt-5'>Contact me!</h1>
     <p className='text-center'>Have an idea for a website but don't know where to start? Want to collborate on a project? Send me a message and let me know!</p>
     <Form className='w-50 m-auto'>
       <Form.Group className="mb-3" controlId="formBasicName">
         <Form.Label>Name</Form.Label>
-        <Form.Control type="text" placeholder="Name" value={username} onChange={(e) => {setUsername(e.target.value);}} />
+        <Form.Control className='shadow-none' type="text" placeholder="Name" value={username} onChange={(e) => {setUsername(e.target.value);}} />
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Email</Form.Label>
-        <Form.Control type="email" placeholder="Email" value={email} onChange={(e) => {setEmail(e.target.value);}}/>
+        <Form.Control className='shadow-none' type="email" placeholder="Email" value={email} onChange={(e) => {setEmail(e.target.value);}}/>
         <Form.Text className="text-muted">
           We'll never share your email with anyone else.
         </Form.Text>
       </Form.Group>
        <Form.Group className="mb-3" controlId="ControlText">
         <Form.Label>Message</Form.Label>
-        <Form.Control as="textarea" rows={3} type="text" value={message} onChange={(e) => {setMessage(e.target.value);}}/>
+        <Form.Control as="textarea" className='shadow-none' rows={3} type="text" value={message} onChange={(e) => {setMessage(e.target.value);}}/>
       </Form.Group>
       <Button variant="primary" type="submit" onClick={handleFormSubmit}>
         Submit

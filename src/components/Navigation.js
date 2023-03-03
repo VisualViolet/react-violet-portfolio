@@ -5,7 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 
 const Navigation = () => {
     return (
-        <Navbar bg="light" variant="light">
+        <Navbar>
         <Container>
           <Nav className="m-auto">
           <Navbar.Brand>Savannah Miller</Navbar.Brand>

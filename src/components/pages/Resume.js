@@ -3,7 +3,7 @@ import React from 'react';
 export default function Resume() {
   return (
     <div className='skills'>
-      <p>Download my <a href="Savannah Miller Dev Resume.pdf" download>resume</a></p>
+      <p className='mt-5'>Download my <a href="Savannah Miller Dev Resume.pdf" download>resume</a></p>
       <h2 className='title'>Front End Skills</h2>
       <ul>
         <li>HTML</li>
@@ -13,7 +13,7 @@ export default function Resume() {
         <li>React</li>
         <li>Bootstrap</li>
       </ul>
-
+      <br/>
       <h2 className='title'>Back End Skills</h2>
       <ul>
         <li>API's</li>
