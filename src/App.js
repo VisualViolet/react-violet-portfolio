@@ -4,12 +4,13 @@ import About from "./components/pages/About";
 import Portfolio from "./components/pages/Portfolio";
 import Contact from "./components/pages/Contact";
 import Resume from "./components/pages/Resume";
+import Header from "./Header";
 
 const App = () => {
   return (
-    <div className="App">
+    <div>
       <BrowserRouter>
-      <h2>Navbar</h2>
+      <Header />
       <hr />
         <Routes>
           <Route path="/" element = {<About/>}/>
