@@ -1,18 +1,25 @@
-import './App.css';
-import Navbar from "./components/Navbar";
-import Header from "./components/Header";
-import Section from "./components/Section";
-import Footer from "./components/Footer";
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import About from "./components/pages/About";
+import Portfolio from "./components/pages/Portfolio";
+import Contact from "./components/pages/Contact";
+import Resume from "./components/pages/Resume";
 
-function App() {
+const App = () => {
   return (
-    <div>
-      <Navbar />
-      <Header />
-      <Section />
-      <Footer />
+    <div className="App">
+      <BrowserRouter>
+      <h2>Navbar</h2>
+      <hr />
+        <Routes>
+          <Route path="/" element = {<About/>}/>
+          <Route path="/portfolio" element = {<Portfolio/>}/>
+          <Route path="/contact" element = {<Contact/>}/>
+          <Route path="/resume" element = {<Resume/>}/>
+        </Routes>
+      </BrowserRouter>
     </div>
-  );
-}
+  )
+};
 
 export default App;
