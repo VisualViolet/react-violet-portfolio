@@ -3,7 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 
 const Footer = () => {
     return (
-      <Nav className="fixed-bottom d-flex justify-content-center" activeKey="/about">
+      <Nav className="d-flex fixed-bottom justify-content-center" activeKey="/about">
         <Nav.Item>
           <Nav.Link href="https://github.com/VisualViolet" target="_blank">Github</Nav.Link>
         </Nav.Item>

@@ -53,7 +53,7 @@ export default function Contact() {
 
   return (
     <div>
-    <h1 className='text-center title mt-5'>Contact me!</h1>
+    <h1 className='text-center title'>Contact me!</h1>
     <p className='text-center'>Have an idea for a website but don't know where to start? Want to collborate on a project? Send me a message and let me know!</p>
     <Form className='w-50 m-auto'>
       <Form.Group className="mb-3" controlId="formBasicName">

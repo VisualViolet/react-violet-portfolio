@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Resume() {
   return (
-    <div className='skills'>
+    <div className='skills text-center'>
       <p className='mt-5'>Download my <a href="Savannah Miller Dev Resume.pdf" download>resume</a></p>
       <h2 className='title'>Front End Skills</h2>
       <ul>
