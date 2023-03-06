@@ -11,9 +11,10 @@ export default function Contact() {
   const [message, setMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
+  // Validate form entries on button click outside click
   const handleFormSubmit = (e) => {
     e.preventDefault();
-
+    // use helper function from utils to validate email address entry
     if (!validateEmail(email)) {
       setErrorMessage('Please enter a valid email');
       return;
@@ -31,14 +32,14 @@ export default function Contact() {
       return;
     }
     setErrorMessage(`Thank you! Your message has been sent.`);
-
+    // Set entries back to empty after validation
     setUsername('');
     setEmail('');
     setMessage('');
   };
 
   return (
-    <div>
+    <div onClick={handleFormSubmit}>
     <h1 className='text-center title'>Contact me!</h1>
     <p className='text-center'>Have an idea for a website but don't know where to start? Want to collborate on a project? Send me a message and let me know!</p>
     <Form className='w-50 m-auto'>

@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 
+// Using props to make Project code reusable
 export default function Project(props) {
     return (
     <Card className='card'>

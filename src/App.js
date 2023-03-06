@@ -1,3 +1,4 @@
+// Requiring all pages, react router, and Bootstrap library
 import React from "react";
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -9,6 +10,7 @@ import Resume from "./components/pages/Resume";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
+// Using react routers to handle page changes
 const App = () => {
   return (
     <div className="App content">

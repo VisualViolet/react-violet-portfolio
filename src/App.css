@@ -1,3 +1,4 @@
+/*Font*/
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 
 * {
@@ -7,10 +8,12 @@
     overflow: hidden;
 }
 
+/*Allowing all divs to take up available height*/
 html, body, #root, .App {
     height: 100%;
 }
 
+/*Drop In Animation for about page and headers*/
 .title, .bio {
     animation: drop-in 1s ease 200ms backwards;
 }
@@ -31,6 +34,7 @@ html, body, #root, .App {
     font-weight: 700;
 }
 
+/*Font*/
 .content {
     height: 100%;
     background: linear-gradient(-45deg, #8EC5FC, #E0C3FC);
@@ -50,7 +54,7 @@ html, body, #root, .App {
 	}
 }
 
-
+/*About Me*/
 .bio {
     font-size: 18px;
 }
@@ -62,6 +66,7 @@ html, body, #root, .App {
     margin: auto;
 }
 
+/*Portfolio Cards*/
 .card-area {
     width: 100%;
 }
@@ -80,6 +85,7 @@ html, body, #root, .App {
     transform: translateY(-5%);
 }
 
+/*Resume Page*/
 .skills ul li{
     list-style-type: none;
 }

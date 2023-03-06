@@ -1,6 +1,7 @@
 import React from 'react';
 import Project from '../Project'
 
+// Storing project details in variables
 const dwuGame = {
   name: 'Don\'t Wake Up',
   description: 'A story driven rpg game built using JavaScript, HTML, and CSS.',
@@ -49,6 +50,7 @@ const splash = {
   src: 'splash.jpg'
 }
 
+// Displaying portfolio info using project props
 export default function Portfolio() {
   return (
     <div>
