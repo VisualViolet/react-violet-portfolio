@@ -14,7 +14,7 @@ Hello, I'm Savannah! And welcome to my newly redesigned portfolio page. One of o
 
 ## Installation
 
-No installation is necessary! You can view my deployed application on Heroku here: 
+No installation is necessary! You can view my deployed application on Heroku here: https://sav-pro-portfolio.herokuapp.com/
 
 ## Usage
 
